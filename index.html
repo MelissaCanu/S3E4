@@ -39,6 +39,7 @@
     <h1>TOMBOLA!</h1>
     <table id="tabellone"></table>
     <button onclick="estraiNum()">Estrai</button>
+    <p id="demo"></p>
     <script>
       let tabellone = document.getElementById("tabellone");
 
@@ -46,10 +47,12 @@
         let singolaCella = document.createElement("td");
         singolaCella.innerText = i;
         tabellone.appendChild(singolaCella);
-        console.log(singolaCella);
       }
 
-      function estraiNum() {}
+      function estraiNum() {
+        numeroCasuale = Math.round(Math.random() * 77);
+        document.getElementById("demo").innerHTML = "Il numero estratto è " + numeroCasuale;
+      }
     </script>
   </body>
 </html>
