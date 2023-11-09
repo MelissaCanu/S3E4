@@ -24,6 +24,10 @@
         float: left;
         border-radius: 3px;
       }
+      td.selected {
+        background-color: rgb(238, 130, 238, 0.5);
+        color: white;
+      }
       button {
         background-color: yellow;
         color: black;
@@ -50,8 +54,10 @@
       }
 
       function estraiNum() {
-        numeroCasuale = Math.round(Math.random() * 77);
+        numeroCasuale = Math.floor(Math.random() * 76) + 1;
         document.getElementById("demo").innerHTML = "Il numero estratto è " + numeroCasuale;
+        let cellaSelezionata = tabellone.children[numeroCasuale - 1];
+        cellaSelezionata.classList.add("selected");
       }
     </script>
   </body>
