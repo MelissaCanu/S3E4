@@ -4,14 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tombola</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
     <script src="/js/js.js"></script>
     <style>
       body {
         text-align: center;
+        font-family: "Open Sans", sans-serif;
+        background-color: black;
+        color: yellow;
+      }
+      #tabellone {
+        margin: 20px auto;
+      }
+      td {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        border: 1px solid yellow;
+        float: left;
       }
     </style>
   </head>
   <body>
     <h1>TOMBOLA!</h1>
+    <table id="tabellone"></table>
+    <button onclick="estraiNum()">Estrai</button>
+    <script>
+      let tabellone = document.getElementById("tabellone");
+
+      for (let i = 1; i < 77; i++) {
+        let singolaCella = document.createElement("td");
+        singolaCella.innerText = i;
+        tabellone.appendChild(singolaCella);
+        console.log(singolaCella);
+      }
+
+      function estraiNum() {}
+    </script>
   </body>
 </html>
